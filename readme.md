@@ -76,6 +76,7 @@ bash setup-plugins.sh
 | Skill | 用途 |
 |-------|------|
 | triage | 問題分流：模糊輸入時先確認意圖再行動 |
+| quant-analyst | 量化分析：金融建模、演算法交易、風險分析、統計套利 |
 
 ### 備份與還原
 
@@ -281,6 +282,7 @@ cp ./commands/plugins-status.md ~/.claude/commands/
 ├── settings.json          # Plugin 設定
 ├── skills/                 # 個人 + 外部 Skills
 │   ├── triage/
+│   ├── quant-analyst/
 │   ├── n8n-code-javascript/
 │   ├── n8n-code-python/
 │   ├── n8n-expression-syntax/

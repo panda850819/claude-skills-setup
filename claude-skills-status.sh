@@ -68,7 +68,7 @@ if [ -d "$SKILLS_DIR" ]; then
                     n8n_skills+=("$skill_name")
                 elif [[ "$skill_name" == pine-* ]]; then
                     pine_skills+=("$skill_name")
-                elif [[ "$skill_name" == "triage" ]]; then
+                elif [[ "$skill_name" == "triage" || "$skill_name" == "quant-analyst" ]]; then
                     personal_skills+=("$skill_name")
                 else
                     other_skills+=("$skill_name")

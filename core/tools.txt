@@ -1,0 +1,23 @@
+# 建議安裝的 CLI 工具
+# macOS: brew install $(cat core/tools.txt | grep -v '^#' | grep -v '^$' | tr '\n' ' ')
+# Ubuntu: apt install $(cat core/tools.txt | grep -v '^#' | grep -v '^$' | tr '\n' ' ')
+
+# 版本控制
+git
+
+# 搜尋工具
+ripgrep
+fzf
+fd
+
+# JSON 處理
+jq
+
+# Node.js (AI CLI 需要)
+node
+
+# 其他常用
+tree
+htop
+curl
+wget

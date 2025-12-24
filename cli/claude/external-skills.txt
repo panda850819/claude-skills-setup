@@ -1,0 +1,6 @@
+# External Skills Sources
+# 格式: Git repository URL (每行一個)
+# Makefile 會自動 clone 並安裝 skills/ 目錄下的內容
+
+# n8n workflow development skills (7 skills)
+https://github.com/czlonkowski/n8n-skills.git

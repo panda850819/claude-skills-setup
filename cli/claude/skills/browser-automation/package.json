@@ -1,0 +1,15 @@
+{
+  "name": "browser-automation",
+  "version": "1.0.0",
+  "description": "Chrome CDP browser automation tools",
+  "scripts": {
+    "start": "node scripts/start.js --profile",
+    "nav": "node scripts/nav.js",
+    "eval": "node scripts/eval.js",
+    "screenshot": "node scripts/screenshot.js",
+    "pick": "node scripts/pick.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.0.0"
+  }
+}

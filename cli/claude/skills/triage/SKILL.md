@@ -1,9 +1,37 @@
 ---
 name: triage
 description: Use when user provides screenshot, vague description, or expresses confusion without clear intent. Triggers on "怪怪的", "壞了", "這是什麼", error screenshots, or any input lacking explicit request.
+allowed-tools: Read, Glob, Grep, AskUserQuestion
 ---
 
 # Triage - 問題分流
+
+---
+
+## Integrations
+
+```
+upstream:
+  - (entry point - 接收模糊輸入)
+
+downstream:
+  - skill: spec-interviewer
+    produces: 確認需要深入需求探索時
+  - skill: systematic-debugging (superpowers)
+    produces: 確認需要修復問題時
+  - skill: brainstorming (superpowers)
+    produces: 確認需要探索方案時
+```
+
+---
+
+## Out of Scope
+
+- **直接解決問題** - 只分流，不實作
+- **假設用戶意圖** - 必須確認
+- **技術細節解釋** - 確認需要後才展開
+
+---
 
 ## Overview
 
@@ -73,3 +101,25 @@ description: Use when user provides screenshot, vague description, or expresses 
 ```
 
 **這就是 baseline 測試中觀察到的失敗行為。**
+
+---
+
+## Verification
+
+分流完成標準：
+
+- [ ] 已確認用戶意圖（理解/修復/探索）
+- [ ] 已確認技術程度（如需要）
+- [ ] 已選擇正確的下游 skill
+- [ ] 用戶同意進入下一步
+
+---
+
+## Safety and Escalation
+
+| 情況 | 行動 |
+|------|------|
+| 用戶明顯焦慮 | 先安撫，再問問題 |
+| 問題涉及安全 | 優先處理安全，不繼續分流 |
+| 無法判斷領域 | 多問一個問題釐清 |
+| 用戶不願回答 | 提供最保守的建議 |

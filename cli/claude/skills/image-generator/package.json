@@ -1,0 +1,21 @@
+{
+  "name": "image-generator",
+  "version": "2.0.0",
+  "description": "Browser automation with CDP for image generation",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "generate": "node scripts/generate.js"
+  },
+  "bin": {
+    "browser-start": "./scripts/start.js",
+    "browser-nav": "./scripts/nav.js",
+    "browser-eval": "./scripts/eval.js",
+    "browser-screenshot": "./scripts/screenshot.js",
+    "browser-pick": "./scripts/pick.js",
+    "gemini-generate": "./scripts/generate.js"
+  },
+  "dependencies": {
+    "pngjs": "^7.0.0",
+    "puppeteer-core": "^24.0.0"
+  }
+}
